@@ -47,6 +47,17 @@ const workerConfig = {
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
       // checkLocationWorkerRoute: 'https://xxx.example.com',
     },
+    {
+      id: 'test_get',
+      name: 'test GET',
+      method: 'GET',
+      target: 'http://httpbin.org/get',
+      expectedCodes: [200],
+      headers: {
+        'accept': 'application/json',
+      },
+      timeout: 50000,
+    },
     // Example TCP Monitor
     // {
     //   id: 'test_tcp_monitor',
